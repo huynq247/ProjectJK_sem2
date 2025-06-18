@@ -1,0 +1,161 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex; /* luôn hiển thị popup */
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-content {
+  background: white;
+  width: 100%;
+  max-width: 90%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-left {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-left img {
+  width: 180px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup-left h3 {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+.popup-left p {
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  margin-top: 6px;
+}
+
+.popup-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  row-gap: 12px;
+  background-color: #d2a679;
+}
+
+.popup-input {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.popup-input input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #a0522d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.note {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ====================== Responsive ====================== */
+
+/* Tablet */
+@media (min-width: 768px) {
+  .popup-content {
+    max-width: 60%;
+  }
+
+  .popup-left img {
+    width: 240px;
+  }
+
+  .popup-left h3 {
+    font-size: 22px;
+  }
+
+  .popup-left p {
+    font-size: 30px;
+  }
+
+  .popup-right {
+    padding: 28px;
+    row-gap: 16px;
+  }
+
+  .popup-input input {
+    font-size: 17px;
+  }
+
+  .note {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .popup-content {
+    max-width: 30%;
+    flex-direction: row;
+  }
+
+  .popup-left,
+  .popup-right {
+    width: 50%;
+  }
+
+  .popup-left {
+    padding: 20px;
+    align-items: flex-start;
+  }
+
+  .popup-left img {
+    width: 192px;
+  }
+
+  .popup-left h3 {
+    font-size: 26px;
+    text-align: left;
+  }
+
+  .popup-left p {
+    font-size: 38px;
+  }
+}
